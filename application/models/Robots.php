@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This is the individual robot pieces you have on hand. Each will have an unique identifier.
  * Identifiers:
@@ -7,14 +8,16 @@
  *  - The plant that the part was built
  *  - Date & Time of the part that was built
  *
- * @author Jonathan Huang
+ * @author Daniel Tian
  */
- class Parts extends CI_Model {
+ class Robots extends CI_Model {
 	 
 	var $data = array(
-		array('code' => 'A3', 'CA' => 'AAAA-0000', 'plant' => 'PlantA', 'date' => '02/09/17', 'time' => '09:30'),
-		array('code' => 'C1', 'CA' => 'BBBB-1111', 'plant' => 'PlantB', 'date' => '02/09/17', 'time' => '13:30'),
-		array('code' => 'M2', 'CA' => 'CCCC-0000', 'plant' => 'PlantC', 'date' => '02/11/17', 'time' => '09:30')
+
+		array('RID' => 'RRRR-0000', 'CA_HEAD' => 'C1', 'CA_BODY' => 'M2', 'CA_FEET' => 'A3'),
+		array('RID' => 'RRRR-0000', 'CA_HEAD' => 'A1', 'CA_BODY' => 'A2', 'CA_FEET' => 'R3'),
+		array('RID' => 'RRRR-0000', 'CA_HEAD' => 'B1', 'CA_BODY' => 'R2', 'CA_FEET' => 'W3'),
+		array('RID' => 'RRRR-0000', 'CA_HEAD' => 'M1', 'CA_BODY' => 'C2', 'CA_FEET' => 'M3')
 	);
 	
 	// Constructor
@@ -25,7 +28,7 @@
 	// Retrieve a single "part" stored in the data defined by the $which
 	public function get($which){
 		foreach($this->data as $part)
-			if($part['code'] == $which)
+			if($part['RID'] == $which)
 				return $part;
 		return null;
 	}

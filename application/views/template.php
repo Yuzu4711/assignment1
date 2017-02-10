@@ -33,21 +33,21 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                 <li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img src="assets/img/Gundam.jpg" class="user-image img-responsive"/>
                     </li>
                 
                     
                     <li>
-                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Homepage </a>
+                        <a class="active-menu"  href="/"><i class="fa fa-dashboard fa-3x"></i> Homepage </a>
                     </li>
                       <li>
-                        <a  href="ui.html"><i class="fa fa-desktop fa-3x"></i> Parts </a>
+                        <a  href="#"><i class="fa fa-desktop fa-3x"></i> Parts </a>
                     </li>
                     <li>
-                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Assembly </a>
+                        <a  href="/Assembly"><i class="fa fa-qrcode fa-3x"></i> Assembly </a>
                     </li>
                            <li  >
-                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> History </a>
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> History </a>
                     </li>           
                                        
                     <li>
@@ -65,22 +65,13 @@
                                     <li>
                                         <a href="#">Carson</a>
                                     </li>
-                                    <li>
-                                        <a href="#">#</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">#</a>
-                                    </li>
-
                                 </ul>
                                
                             </li>
                         </ul>
                       </li>   
                 </ul>
-               
             </div>
-            
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
