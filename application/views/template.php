@@ -41,7 +41,7 @@
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Homepage </a>
                     </li>
                       <li>
-                        <a  href="ui.html"><i class="fa fa-desktop fa-3x"></i> Parts </a>
+                        <a  href="parts.html"><i class="fa fa-desktop fa-3x"></i> Parts </a>
                     </li>
                     <li>
                         <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Assembly </a>
