@@ -5,7 +5,6 @@
 Carson <a target='_blank' href='https://github.com/Laponica/assignment1'> Carson's github </a><br/>
 Jonathan <a target='_blank' href='https://github.com/chickypoo/assignment1'> Jonathan's github </a><br/>
 Kevin <a target='_blank' href='https://github.com/Kaymit'> Kevin's github </a>
-
 </div>
 <br/>
 <br/>
