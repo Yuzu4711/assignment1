@@ -56,16 +56,19 @@
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> About<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Yuzu</a>
+                                <a href="/About">Yuzu</a>
                             </li>
                             <li>
-                                <a href="#">Daniel</a>
+                                <a href="About/Daniel">Daniel</a>
                             </li>
                             <li>
-                                <a href="#">Jonathan</a>        
+                                <a href="/About/Jonathan">Jonathan</a>        
                             </li>
                             <li>
-                                <a href="#">Carson</a>        
+                                <a href="/About/Carson">Carson</a>        
+                            </li>
+                            <li>
+                                <a href="/About/Kevin">Kevin</a>        
                             </li>
                         </ul>
                       </li>   
