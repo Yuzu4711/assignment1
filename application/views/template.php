@@ -12,6 +12,7 @@
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/js/morris-0.4.3.min.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -25,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Yuzu</a> 
+                <a class="navbar-brand" href="index.html"><img style='margin-top:-20px' src='/assets/img/team_logo.png' width='150' height='70' /></a> 
             </div>
         </nav>   
            <!-- /. NAV TOP  -->
@@ -33,54 +34,46 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                 <li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img src="assets/img/Gundam.jpg" class="user-image img-responsive"/>
                     </li>
                 
                     
                     <li>
-                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Homepage </a>
+                        <a class="active-menu"  href="/"><i class="fa fa-dashboard fa-3x"></i> Homepage </a>
                     </li>
                       <li>
-                        <a  href="parts.html"><i class="fa fa-desktop fa-3x"></i> Parts </a>
+                        <!--Parts Page-->
+                        <a  href="/Inventory"><i class="fa fa-desktop fa-3x"></i> Parts </a>
                     </li>
                     <li>
-                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Assembly </a>
+                        <a  href="/Assembly"><i class="fa fa-qrcode fa-3x"></i> Assembly </a>
                     </li>
                            <li  >
-                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> History </a>
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> History </a>
                     </li>           
                                        
                     <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> About<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Yuzu</a>
+                                <a href="/About">Yuzu</a>
                             </li>
                             <li>
-                                <a href="#">Daniel</a>
+                                <a href="About/Daniel">Daniel</a>
                             </li>
                             <li>
-                                <a href="#">Jonathan<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Carson</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">#</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">#</a>
-                                    </li>
-
-                                </ul>
-                               
+                                <a href="/About/Jonathan">Jonathan</a>        
+                            </li>
+                            <li>
+                                <a href="/About/Carson">Carson</a>        
+                            </li>
+                            <li>
+                                <a href="/About/Kevin">Kevin</a>        
                             </li>
                         </ul>
                       </li>   
                 </ul>
-               
             </div>
-            
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
@@ -97,9 +90,14 @@
                  <!-- /. ROW  -->
                  <hr />
                
-    </div>
+                </div>
+                <div class='panel-footer text-center'> 
+                    © 2017 Yuzu (Daniel Tian, Jonathan Huang, Kevin Mitchell, Carson Yamamoto) 
+                        <img src='/assets/img/team_logo.png' width='70' height='35' />
+                </div>
              <!-- /. PAGE INNER  -->
             </div>
+
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
@@ -110,6 +108,9 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- CHARTS SCRIPTS-->
+    <script src="assets/js/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
    
