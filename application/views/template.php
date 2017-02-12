@@ -59,16 +59,16 @@
                                 <a href="/About">Yuzu</a>
                             </li>
                             <li>
-                                <a href="About/Daniel">Daniel</a>
+                                <a href="/About">Daniel</a>
                             </li>
                             <li>
-                                <a href="/About/Jonathan">Jonathan</a>        
+                                <a href="/About">Jonathan</a>        
                             </li>
                             <li>
-                                <a href="/About/Carson">Carson</a>        
+                                <a href="/About">Carson</a>        
                             </li>
                             <li>
-                                <a href="/About/Kevin">Kevin</a>        
+                                <a href="/About">Kevin</a>        
                             </li>
                         </ul>
                       </li>   

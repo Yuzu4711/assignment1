@@ -16,6 +16,17 @@ class History extends Application
 	{
 		
 		$this->data['pagebody'] = 'history';
+
+
+		$source = $this->Records->all();
+		$records = array();
+
+		foreach($source as $record){
+			$records[] = array('DATE' => $record['DATE'], 'RECORD-TYPE' => $record['RECORD-TYPE'], 
+				'RECORD-INFO' => $record['RECORD-INFO']);
+		}
+		$this->data['records'] = $records;
+
 		$this->render();
 	}
 
