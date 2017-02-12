@@ -49,7 +49,7 @@
                         <a  href="/Assembly"><i class="fa fa-qrcode fa-3x"></i> Assembly </a>
                     </li>
                            <li  >
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> History </a>
+                        <a  href="/History"><i class="fa fa-bar-chart-o fa-3x"></i> History </a>
                     </li>           
                                        
                     <li>
