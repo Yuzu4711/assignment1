@@ -6,18 +6,6 @@
  * @author Daniel Tian
  */
  class Records extends CI_Model {
-	 
-	var $data = array(
-
-		array('HID' => 'HHHH-0000', 'DATE' => '2/05/2017', 'RECORD-TYPE' => 'Assembly', 
-			'RECORD-INFO' => 'A1 M2 W3'),
-		array('HID' => 'HHHH-0001', 'DATE' => '2/05/2017', 'RECORD-TYPE' => 'Shipment', 
-			'RECORD-INFO' => 'Robot Id: RRRR-0001'),
-		array('HID' => 'HHHH-0002', 'DATE' => '2/05/2017', 'RECORD-TYPE' => 'Purchase', 
-			'RECORD-INFO' => 'Part ID: A3'),
-		array('HID' => 'HHHH-0003', 'DATE' => '2/05/2017', 'RECORD-TYPE' => 'Purchase', 
-			'RECORD-INFO' => 'Part ID: A2')
-	);
 	
 
 	// Constructor
@@ -25,20 +13,49 @@
 		parent::__construct();
 	}
 	
-	// Retrieve a single "part" stored in the data defined by the $which
-	public function get($which){
-		foreach($this->data as $part)
-			if($part['RID'] == $which)
-				return $part;
-		return null;
+	public function getAllRecords(){
+		//$this->db->get('parts');
+		$this->db->from('history');
+		$this->db->order_by("date", "desc");
+		$query = $this->db->get(); 
+		return $query->result_array(); 
 	}
 
-	public function count(){
-		return sizeof($this->data);
+	public function getPaginatedRecords($limit, $start){
+		$this->db->limit($limit, $start);
+		$query = $this->db->get('history');
+		 if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
 	}
+
+	 public function count() {
+        return $this->db->count_all("history");
+    }
+
+	// Retrieve a single "record" stored in the history table
+	public function getSingleRecord($id){
+		$this->db->from('history');
+		$this->db->where('ID', $id); 
+		$query = $this->db->get();
+		$result = $query->result_array();
+		return $result;
+	}
+
 	
-	// Retrieve all the information stored in the data
-	public function all(){
-		return $this->data;
+	public function insertRecord($data){
+		$this->db->insert('history', $data);
+	}
+
+	public function removeAllRecords(){
+		$this->db->empty_table('history');
+	}
+
+	public function removeSingleRecord($id){
+		$this->db->delete('history', array('ID' => $id));// Produces: // DELETE FROM mytable  // WHERE id 
 	}
  }

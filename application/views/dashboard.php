@@ -1,61 +1,124 @@
-     <!-- ROW  -->
 <div class="row">
-    <div class="col-md-12">
-     <h2 class='text-center'>Yuzu Bot Factory</h2>   
-        
+    <div class="col-lg-3 col-md-6">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-industry fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge">{partsCount}</div>
+                    <div># of parts in stock</div>
+                </div>
+            </div>
+        </div>
+        <a href="/Inventory">
+            <div class="panel-footer">
+                <span class="pull-left">View Parts</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
     </div>
-</div> 
+</div>
 
-<div class="row">
-    <div class="col-md-3 col-sm-6 col-xs-6">           
-        <div class="panel panel-back noti-box">
-            <span class="icon-box bg-color-red set-icon">
-                <i class="glyphicon glyphicon-shopping-cart"></i>
-            </span>
-            <div class="text-box" >
-                <p class="main-text">{partsCount}</p>
-                <p class="text-muted"> # of parts in stock</p>
+    <div class="col-lg-3 col-md-6">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-cubes fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge">{robotsCount}</div>
+                    <div># of assembled robots</div>
+                </div>
             </div>
         </div>
+        <a href="#">
+            <div class="panel-footer">
+                <span class="pull-left">View Assembled Bots</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
     </div>
+</div>
 
-    <div class="col-md-3 col-sm-6 col-xs-6">           
-        <div class="panel panel-back noti-box">
-            <span class="icon-box bg-color-green set-icon">
-                <i class="glyphicon glyphicon-shopping-cart"></i>
-            </span>
-            <div class="text-box" >
-                <p class="main-text">{robotsCount}</p>
-                <p class="text-muted"># of assembled robots</p>
-            </div>
-         </div>
-     </div>
-    
-    <div class="col-md-3 col-sm-6 col-xs-6">           
-        <div class="panel panel-back noti-box">
-            <span class="icon-box bg-color-greenlor-blue set-icon">
-                <i class="glyphicon glyphicon-usd"></i>
-            </span>
-            <div class="text-box" >
-                <p class="main-text">69000</p>
-                <p class="text-muted">$ spent</p>
+
+
+<div class="col-lg-3 col-md-6">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-child fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge" id="spent">{spent}</div>
+                    <div>$ Spent</div>
+                </div>
             </div>
         </div>
+        <a href="/production/bots">
+            <div class="panel-footer">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
     </div>
-    
-    <div class="col-md-3 col-sm-6 col-xs-6">           
-        <div class="panel panel-back noti-box">
-            <span class="icon-box bg-color-brown set-icon">
-                <i class="glyphicon glyphicon-usd"></i>
-            </span>
-            <div class="text-box" >
-                <p class="main-text">100000</p>
-                <p class="text-muted">$ earned</p>
+</div>
+
+
+<div class="col-lg-3 col-md-6">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-child fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge" id="earned">{earned}</div>
+                    <div>$ Earned</div>
+                </div>
             </div>
         </div>
+        <a href="/production/bots">
+            <div class="panel-footer">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
     </div>
-    
-</div><!--./ROW -->
+</div>
+
+
+     <div class="col-lg-3 col-md-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="glyphicon glyphicon-usd"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                     <div class="huge">{balance}</div>
+                    <div>Current Balance</div>
+                </div>
+            </div>
+        </div>
+        <a href="/production/bots">
+            <div class="panel-footer">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+</div>
+
+</div>
 
 
 
@@ -73,14 +136,14 @@
         Morris.Donut({
           element: 'sales-donut-chart',
           data: [
-            {label: "$ spent", value: earned},
-            {label: "$ earned", value: spent}
+            {label: "$ spent", value: spent},
+            {label: "$ earned", value: earned}
           ]
         });
     }
 
     window.onload = function() {
-      renderProfitsPieGraph(69000, 100000);
+        renderProfitsPieGraph($("#earned").html(), $("#spent").html());
     };
 
 </script>

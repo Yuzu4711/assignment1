@@ -20,9 +20,9 @@
                     <tbody>
                 		{records}
                             <tr>
-                                <td>{DATE}</td>
-                                <td>{RECORD-TYPE}</td>
-                                <td>{RECORD-INFO}</td>
+                                <td>{date}</td>
+                                <td>{record_type}</td>
+                                <td>{info}</td>
                             </tr>
                         {/records}
                     </tbody>
@@ -31,5 +31,10 @@
             </div>
         </div>
     </div>
+    {links}
     <br />
     <br />
+    <!--
+    <td>{DATE}</td>
+                                <td>{RECORD-TYPE}</td>
+                                <td>{RECORD-INFO}</td>

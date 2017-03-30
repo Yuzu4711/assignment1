@@ -1,0 +1,22 @@
+/* Parts CSS*/
+.partDisplay{
+    border: solid;
+    padding:5px;
+}
+.partsContainer{
+    width:90%;
+    height:90%;
+    margin:auto;
+    margin-bottom:10px;
+}
+
+.partsContainer img:hover{
+    cursor:pointer;
+}
+
+.centerButton{
+    display:block;
+    width:200px;
+    margin:auto;
+    margin-bottom:10px;
+}

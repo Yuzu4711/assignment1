@@ -14,7 +14,8 @@ class About extends Application
 
 	public function index()
 	{
-		
+		$role = $this->session->userdata('userrole');
+		$this->data['nav'] = viewBuilder($role);
 		$this->data['pagebody'] = 'about';
 		$this->render();
 	}
