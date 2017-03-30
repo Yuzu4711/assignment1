@@ -12,33 +12,44 @@
  */
  class Robots extends CI_Model {
 	 
-	var $data = array(
-
-		array('RID' => 'RRRR-0000', 'CA_HEAD' => 'C1', 'CA_BODY' => 'M2', 'CA_FEET' => 'A3'),
-		array('RID' => 'RRRR-0001', 'CA_HEAD' => 'A1', 'CA_BODY' => 'B2', 'CA_FEET' => 'R3'),
-		array('RID' => 'RRRR-0002', 'CA_HEAD' => 'B1', 'CA_BODY' => 'R2', 'CA_FEET' => 'W3'),
-		array('RID' => 'RRRR-0003', 'CA_HEAD' => 'C1', 'CA_BODY' => 'C2', 'CA_FEET' => 'A3')
-	);
 	
 	// Constructor
 	public function __construct(){
 		parent::__construct();
 	}
 	
-	// Retrieve a single "part" stored in the data defined by the $which
-	public function get($which){
-		foreach($this->data as $part)
-			if($part['RID'] == $which)
-				return $part;
-		return null;
-	}
 
 	public function count(){
-		return sizeof($this->data);
+		$this->db->from('robots');
+		$query = $this->db->get();
+		$rowcount = $query->num_rows();
+		return $rowcount;
 	}
 	
-	// Retrieve all the information stored in the data
-	public function all(){
-		return $this->data;
+	public function getSingleBot($id){
+		$this->db->from('robots');
+		$this->db->where('ID', $id); 
+		$query = $this->db->get();
+		$result = $query->result_array();
+		return $result;
 	}
+	// Retrieve all the information stored in the robots table
+	public function getAllBots(){
+		$this->db->from('robots');
+		$query = $this->db->get(); 
+		return $query->result_array(); 
+	}
+
+	public function addBot($data){
+		$this->db->insert('robots', $data);
+	}
+
+	public function deleteBot($id){
+		$this->db->delete('robots', array('ID' => $id));
+	}
+
+	public function removeAllRobots(){
+		$this->db->empty_table('robots');
+	}
+
  }
