@@ -5,6 +5,11 @@ function confirmPurchase(){
     if(r==true) location.href = '/inventory/buyParts';
 }
 
+function confirmReboot(){
+  var r = confirm("Are you sure you'd like to reboot?.");
+  if(r==true) location.href = '/Manage/resetApp';
+}
+
 function displayPartInfo(partID){
     location.href = '/inventory/displayPartInfo/' + partID;
 }
@@ -52,4 +57,10 @@ function displayPartInfo(partID){
     function sellBot(id){
       var r = confirm("Are you sure you'd like to sell this bot?");
       if(r==true) location.href = '/Assembly/sellBot/' + id;
+    }
+
+
+    //history update
+    function updateHistoryView(){
+      location.href = '/History/paginatedRecordsByType/' + $("#historyFilterVal").val();
     }
