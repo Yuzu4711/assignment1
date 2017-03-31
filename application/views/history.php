@@ -7,6 +7,17 @@
         <div class="panel-heading" style='background-color:#C90000;color:#fff'>
            	Record of activities
         </div>
+        <div class="panel-heading">
+            Filter by
+            <select id="historyFilterVal" onchange="updateHistoryView()">
+                <option>Date</option>
+                <option>Purchase</option>
+                <option>Sale</option>
+                <option>Build</option>
+                <option>Assemble</option>
+                <option>Return</option>
+            </select>
+        </div>
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table">
@@ -34,7 +45,3 @@
     {links}
     <br />
     <br />
-    <!--
-    <td>{DATE}</td>
-                                <td>{RECORD-TYPE}</td>
-                                <td>{RECORD-INFO}</td>

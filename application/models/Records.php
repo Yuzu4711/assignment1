@@ -46,6 +46,30 @@
 		return $result;
 	}
 
+	public function getPaginatedRecordsByType($limit, $start, $type="Date"){
+
+		//echo("limit: " . $limit . "</br>" ."start-> " . $start. " <br> $type=".$type); die();
+
+		$this->db->from('history');
+		$this->db->limit($limit, $start);	
+		switch($type){
+			case "Date":
+				$this->db->order_by("date", "desc");
+			break;	
+			default:
+			$this->db->where('record_type', $type);
+		}
+
+		$query = $this->db->get();
+		 if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        echo "false"; die();
+        return false;
+	}
 	
 	public function insertRecord($data){
 		$this->db->insert('history', $data);

@@ -40,43 +40,4 @@
     </div>
     <br />
     <br />
-    <!-- Assembled bots ready for shipping to head office -->
-   <div class="panel panel-info">
-        <div class="panel-heading">
-            Assembled bot(s)
-        </div>
-        <div class="panel-body">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Robot ID</th>
-                            <th>Composition Info</th>
-                            <th>Date Assembled</th>
-                            <th>Picture</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {robots}
-                            <tr>
-                                <td>{RID}</td>
-                                <td>Head: {CA_HEAD} <br/>
-                                    Body: {CA_BODY} <br/>
-                                    Feet: {CA_FEET}</td>
-                                <td>
-                                    {assemble_date}
-                                </td>
-                                <td><img height=50 width=100 src="/assets/parts/{imgSrcHead}" title="{CA_HEAD}"/> <br/>
-                                    <img height=50 width=100 src="/assets/parts/{imgSrcBody}" title="{CA_BODY}"/> <br/>
-                                    <img height=50 width=100 src="/assets/parts/{imgSrcFeet}" title="{CA_FEET}"/>
-                                </td>
-                                <td>
-                                    <button class='btn btn-sm' onclick='sellBot("{RID}")'>Sell</button>
-                                </td>
-                            </tr>
-                        {/robots}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+   

@@ -1,57 +1,76 @@
-Manager
-<a href="/Manage/resetApp"> Reset app!</a> <br>
+<h1 class="text-danger text-center">  Configure Site Settings </h1>
 
 <div class="container">
-  <form>
+
+
+
+  <form action="/Manage/register" method="post">
+  		<br/>
+  		<br/>
     <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <label for="plantName" class="col-sm-2 col-form-label">Plant Name</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <input type="text" name="plantName" class="form-control" value='yuzu' placeholder="yuzu">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <label for="secret" class="col-sm-2 col-form-label">Secret</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-      </div>
-    </div>
-    <fieldset class="form-group row">
-      <legend class="col-form-legend col-sm-2">Radios</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-            Option one is this and that&mdash;be sure to include why it's great
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-            Option two can be something else and selecting it will deselect option one
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-            Option three is disabled
-          </label>
-        </div>
-      </div>
-    </fieldset>
-    <div class="form-group row">
-      <label class="col-sm-2">Checkbox</label>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> Check me out
-          </label>
-        </div>
+        <input type="password" name="secret" class="form-control" id="secret" placeholder="secret">
       </div>
     </div>
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Register</button>
       </div>
     </div>
   </form>
+
+<br/>
+<button class="btn btn-info text-center" onclick='confirmReboot()' role="button">Reset app</button>
+
+  <h2 class="text-info text-center">Current apikey: {apiKey}</h2>
+
 </div>
+
+<br>
+ <!-- Assembled bots ready for shipping to head office -->
+   <div class="panel panel-info">
+        <div class="panel-heading">
+            Assembled bot(s)
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Robot ID</th>
+                            <th>Composition Info</th>
+                            <th>Date Assembled</th>
+                            <th>Picture</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {robots}
+                            <tr>
+                                <td>{RID}</td>
+                                <td>Head: {CA_HEAD} <br/>
+                                    Body: {CA_BODY} <br/>
+                                    Feet: {CA_FEET}</td>
+                                <td>
+                                    {assemble_date}
+                                </td>
+                                <td><img height=50 width=100 src="/assets/parts/{imgSrcHead}" title="{CA_HEAD}"/> <br/>
+                                    <img height=50 width=100 src="/assets/parts/{imgSrcBody}" title="{CA_BODY}"/> <br/>
+                                    <img height=50 width=100 src="/assets/parts/{imgSrcFeet}" title="{CA_FEET}"/>
+                                </td>
+                                <td>
+                                    <button class='btn btn-sm' onclick='sellBot("{RID}")'>Sell</button>
+                                </td>
+                            </tr>
+                        {/robots}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img style='margin-top:-20px' src='/assets/img/team_logo.png' width='150' height='70' /></a> 
+                <a class="navbar-brand" href="/Welcome"><img style='margin-top:-20px' src='/assets/img/team_logo.png' width='150' height='70' /></a> 
             </div>
         </nav>   
            <!-- /. NAV TOP  -->

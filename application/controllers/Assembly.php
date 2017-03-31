@@ -40,26 +40,6 @@ class Assembly extends Application
 		}
 		$this->data['parts'] = $parts;
 
-
-		
-		// build the list of robots, then pass to the view
-		$robots = array();
-		$robotsList = $this->Robots->getAllBots();
-		foreach($robotsList as $bot)
-		{
-			$imgSrcHead =  $bot['head_model'].$bot['head_piece'].".jpeg";
-			$imgSrcBody = $bot['body_model'].$bot['body_piece'].".jpeg";
-			$imgSrcFeet = $bot['foot_model'].$bot['foot_piece'].".jpeg";
-
-
-
-			$robots[] = array('RID'=>$bot['ID'] , 'CA_HEAD'=>$bot['head_ca'], 'CA_BODY' => $bot['body_ca'], 
-				'CA_FEET' => $bot['foot_ca'], 'imgSrcHead' => $imgSrcHead, 'imgSrcBody' => $imgSrcBody, 
-				'imgSrcFeet' => $imgSrcFeet , 'assemble_date' => $bot['assemble_date']);
-		}
-		
-		$this->data['robots'] = $robots;
-
 		$this->render(); 
 	}
 
@@ -170,8 +150,7 @@ class Assembly extends Application
 				die();
 		}
 
-		$url = url() . "/Assembly";
-		header( "Location: $url" );
+		redirect($_SERVER['HTTP_REFERER']); // back where we came from
 	}
 
 	public function sellBot($id){
