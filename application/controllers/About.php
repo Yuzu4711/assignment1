@@ -16,6 +16,7 @@ class About extends Application
 	{
 		$role = $this->session->userdata('userrole');
 		$this->data['nav'] = viewBuilder($role);
+		$this->data['pagetitle'] = 'About ('. $role . ')';
 		$this->data['pagebody'] = 'about';
 		$this->render();
 	}

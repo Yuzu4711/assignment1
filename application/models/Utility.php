@@ -42,8 +42,13 @@
 		return $info[0]['apikey'];
 	}
 
-	public function updateApiKey(){
-		
+	public function updateApiKey($newKey){
+		$info = $this->getInfo();
+		$data = array(
+               'apikey' => $newKey
+        );
+		$this->db->where('id', 1);
+		$this->db->update('site_statistics', $data);
 	}
 
 	public function updateMoneyEarned($earned){
