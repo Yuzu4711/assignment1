@@ -86,7 +86,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 /* User Roles */
+// on default, guest cannot assess whatever the "company" can do at the back end like making parts
 defined('ROLE_GUEST') OR define('ROLE_GUEST', 'Guest');
+// all below are employees of the company, have full access to the funcionality of the robot and part making, processing
 defined('ROLE_WORKER') OR define('ROLE_WORKER', 'Worker');
 defined('ROLE_SUPERVISOR') OR define('ROLE_SUPERVISOR', 'Supervisor');
 defined('ROLE_BOSS') OR define('ROLE_BOSS', 'Boss');

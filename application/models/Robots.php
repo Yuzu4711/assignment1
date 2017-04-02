@@ -17,6 +17,8 @@
 		parent::__construct();
 	}
 	
+	// gets the amount of all robot made
+
 	public function count(){
 		$this->db->from('robots');
 		$query = $this->db->get();
@@ -24,6 +26,7 @@
 		return $rowcount;
 	}
 	
+	// get a single robot by their id
 	public function getSingleBot($id){
 		$this->db->from('robots');
 		$this->db->where('ID', $id); 
@@ -38,16 +41,18 @@
 		return $query->result_array(); 
 	}
 
+	// add a robot, usually after making them by parts
 	public function addBot($data){
 		$this->db->insert('robots', $data);
 	}
 
+	// remove a robot by their id, usually when they are sold
 	public function deleteBot($id){
 		$this->db->delete('robots', array('ID' => $id));
 	}
 
+	// remove all robot available on hand
 	public function removeAllRobots(){
 		$this->db->empty_table('robots');
 	}
-
  }
