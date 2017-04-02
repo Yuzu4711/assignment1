@@ -4,8 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Manage extends Application
 {
-
-
 	function __construct()
 	{
 		parent:: __construct();
@@ -17,7 +15,6 @@ class Manage extends Application
 		$role = $this->session->userdata('userrole');
 		if((strcmp($role, "Boss") != 0))
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
-		
 
 		$this->data['pagebody'] = "manage";
 		$role = $this->session->userdata('userrole');
@@ -34,8 +31,6 @@ class Manage extends Application
 			$imgSrcHead =  $bot['head_model'].$bot['head_piece'].".jpeg";
 			$imgSrcBody = $bot['body_model'].$bot['body_piece'].".jpeg";
 			$imgSrcFeet = $bot['foot_model'].$bot['foot_piece'].".jpeg";
-
-
 
 			$robots[] = array('RID'=>$bot['ID'] , 'CA_HEAD'=>$bot['head_ca'], 'CA_BODY' => $bot['body_ca'], 
 				'CA_FEET' => $bot['foot_ca'], 'imgSrcHead' => $imgSrcHead, 'imgSrcBody' => $imgSrcBody, 
@@ -63,7 +58,6 @@ class Manage extends Application
 
 		$url = url() . "/Welcome";
 		header( "Location: $url" );
-
 	}
 
 	public function register(){
@@ -90,5 +84,4 @@ class Manage extends Application
 		$url = url() . "/Manage";
 		header( "Location: $url" );
 	}
-
 }

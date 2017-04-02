@@ -2,6 +2,7 @@
 	<br />
 	<br />
 	<br />
+
     <!-- List of available parts -->
    <div class="panel">
         <div class="panel-heading" style='background-color:#C90000;color:#fff'>
@@ -18,6 +19,8 @@
                 <option>Return</option>
             </select>
         </div>
+
+        <!-- Table Panel -->
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table">
@@ -38,10 +41,11 @@
                         {/records}
                     </tbody>
                 </table>
-                
             </div>
         </div>
     </div>
-    {links}
+    <h2 class="text-center">
+        <small>{links}</small>
+    </h2>
     <br />
     <br />

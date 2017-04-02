@@ -9,21 +9,21 @@
  *
  * @author Jonathan Huang
  */
- class Parts extends CI_Model {
-	 
+
+ class Parts extends CI_Model 
+ {
 	// Constructor
 	public function __construct(){
 		parent::__construct();
 	}
-	
-	// gets the amount of available part on hand
+   
 	public function count(){
 		$this->db->from('parts');
 		$query = $this->db->get();
 		$rowcount = $query->num_rows();
 		return $rowcount;
 	}
-	
+   
 	// gets all available parts on hand
 	public function getAllParts(){
 		$this->db->from('parts');

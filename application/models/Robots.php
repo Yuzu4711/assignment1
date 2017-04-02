@@ -10,15 +10,15 @@
  *
  * @author Daniel Tian
  */
- class Robots extends CI_Model {
-	 
-	
+ class Robots extends CI_Model 
+ {
 	// Constructor
 	public function __construct(){
 		parent::__construct();
 	}
 	
 	// gets the amount of all robot made
+
 	public function count(){
 		$this->db->from('robots');
 		$query = $this->db->get();
