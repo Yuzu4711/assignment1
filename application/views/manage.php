@@ -1,12 +1,9 @@
 <h1 class="text-danger text-center">  Configure Site Settings </h1>
 
-<div class="container">
-
-
-
+<div class="container-fluid">
   <form action="/Manage/register" method="post">
-  		<br/>
-  		<br/>
+		<br/>
+		<br/>
     <div class="form-group row">
       <label for="plantName" class="col-sm-2 col-form-label">Plant Name</label>
       <div class="col-sm-10">
@@ -26,11 +23,10 @@
     </div>
   </form>
 
-<br/>
-<button class="btn btn-info text-center" onclick='confirmReboot()' role="button">Reset app</button>
+  <br/>
+  <button class="btn btn-info text-center" onclick='confirmReboot()' role="button">Reset app</button>
 
   <h2 class="text-info text-center">Current apikey: {apiKey}</h2>
-
 </div>
 
 <br>
