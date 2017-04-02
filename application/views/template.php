@@ -15,6 +15,7 @@
     <link href="/assets/js/morris-0.4.3.min.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   
 </head>
 <body>
     <div id="wrapper">
@@ -36,7 +37,6 @@
                 <li class="text-center">
                     <img src="/assets/img/Gundam.jpg" class="user-image img-responsive"/>
                 </li>
-              
                     {nav}
                     <li class="dropdown">
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -49,11 +49,7 @@
                           <li><a href="/roles/actor/Boss">Boss</a></li>
                       </ul>
                     </li>   
-                
-
                 </ul>
-                
-
             </div>
         </nav>  
         <!-- /. NAV SIDE  -->
@@ -73,12 +69,11 @@
                
                 </div>
                 <div class='panel-footer text-center'> 
-                    © 2017 Yuzu (Daniel Tian, Jonathan Huang, Kevin Mitchell, Carson Yamamoto, Simon) 
+                    © 2017 Yuzu (Daniel Tian, Jonathan Huang, Kevin Mitchell, Carson Yamamoto, Simon Zwick) 
                         <img src='/assets/img/team_logo.png' width='70' height='35' />
                 </div>
              <!-- /. PAGE INNER  -->
             </div>
-
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->

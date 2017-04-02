@@ -3,8 +3,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 //Parts Controller
-class Inventory extends Application{ 
-
+class Inventory extends Application
+{ 
 	function __construct()
 	{
 		parent::__construct();
