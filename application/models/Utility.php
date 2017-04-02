@@ -10,14 +10,12 @@
  *
  * @author Daniel Tian
  */
- class Utility extends CI_Model {
-	 
-	
+ class Utility extends CI_Model 
+ {
 	// Constructor
 	public function __construct(){
 		parent::__construct();
 	}
-	
 
 	public function getInfo(){
 		$this->db->from('site_statistics');
@@ -81,5 +79,4 @@
 		$this->db->where('id', 1);
 		$this->db->update('site_statistics', $data);
 	}
-
  }

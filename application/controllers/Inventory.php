@@ -10,8 +10,8 @@ class Inventory extends Application
 		parent::__construct();
 	}
 	
-	public function index(){
-
+	public function index()
+	{
 		$role = $this->session->userdata('userrole');
 		if((strcmp($role, "Worker") != 0) &&
 			(strcmp($role, "Boss") != 0) &&
@@ -19,7 +19,6 @@ class Inventory extends Application
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
 		}
 		$this->data['nav'] = viewBuilder($role);
-
 
 		$this->data['pagebody'] = 'listview';
 		$this->data['pagetitle'] = 'Parts ('. $role . ')';
@@ -56,7 +55,8 @@ class Inventory extends Application
 		$this->render();
 	}
 
-	public function buildMoreParts(){
+	public function buildMoreParts()
+	{
 		$response = file_get_contents('https://umbrella.jlparry.com/work/mybuilds?key='.$this->Utility->getApiKey()); 
         $parts = json_decode($response, true);
         foreach($parts as $part){
@@ -82,7 +82,8 @@ class Inventory extends Application
 		header( "Location: $url" );
 	}
 
-	public function buyParts(){
+	public function buyParts()
+	{
 
 		$response = file_get_contents('https://umbrella.jlparry.com/work/buybox?key='.$this->Utility->getApiKey());
         $parts = json_decode($response, true);
@@ -110,7 +111,8 @@ class Inventory extends Application
 		header( "Location: $url" );
 	}
 
-	function displayPartInfo($ID){
+	function displayPartInfo($ID)
+	{
 		$part = $this->Parts->getSinglePart($ID);
 		
 		$this->data['pagebody'] = 'part_info';
@@ -123,6 +125,4 @@ class Inventory extends Application
 		$this->data['stamp'] = $part[0]['stamp'];
 		$this->render();
 	}
-
-
 }

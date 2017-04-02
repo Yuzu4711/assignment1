@@ -9,14 +9,12 @@
  *
  * @author Jonathan Huang
  */
- class Parts extends CI_Model {
-	 
-	
+ class Parts extends CI_Model 
+ {
 	// Constructor
 	public function __construct(){
 		parent::__construct();
 	}
-	
 
 	public function count(){
 		$this->db->from('parts');
@@ -24,7 +22,6 @@
 		$rowcount = $query->num_rows();
 		return $rowcount;
 	}
-	
 
 	public function getAllParts(){
 		//$this->db->get('parts');

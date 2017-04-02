@@ -19,6 +19,8 @@
                 <option>Return</option>
             </select>
         </div>
+
+        <!-- Table Panel -->
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table">

@@ -5,9 +5,8 @@
  *
  * @author Daniel Tian
  */
- class Records extends CI_Model {
-	
-
+ class Records extends CI_Model 
+ {
 	// Constructor
 	public function __construct(){
 		parent::__construct();
