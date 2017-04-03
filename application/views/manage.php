@@ -16,6 +16,7 @@
         <input type="password" name="secret" class="form-control" id="secret" placeholder="secret">
       </div>
     </div>
+	<!-- Register Button-->
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10">
         <button type="submit" class="btn btn-primary">Register</button>
@@ -24,6 +25,7 @@
   </form>
 
   <br/>
+  <!-- Reset App Button-->
   <button class="btn btn-info text-center" onclick='confirmReboot()' role="button">Reset app</button>
 
   <h2 class="text-info text-center">Current apikey: {apiKey}</h2>
